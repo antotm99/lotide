@@ -11,8 +11,14 @@ const assertEqual = function(actual, expected) {
 const findKeyByValue = function(object, value) {
   //it should scan the object and return the first key which contains the given value
   //if no key = that value return undefined
-  return Object.keys(object).find(key => object[key] === value);
-}
+  for (let key in object) {
+    if (value === object[key]) {
+      console.log(key);
+      return key;
+    }
+  }
+  return undefined;
+};
 
 
 const bestTVShowsByGenre = { 
