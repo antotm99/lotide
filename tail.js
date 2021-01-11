@@ -1,6 +1,7 @@
 const tail = function(array) {
   if (array.length > 1) {
-    return array.shift();
+    array.shift();
+    return array;
   }
 };
 
